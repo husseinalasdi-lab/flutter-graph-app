@@ -21,6 +21,16 @@ jobs:
         with:
           channel: 'stable'
 
+      - name: Recreate Project Structure
+        run: |
+          mkdir temp_code
+          cp -r lib temp_code/ || true
+          cp pubspec.yaml temp_code/ || true
+          flutter create --org com.example graph_app
+          cp -r graph_app/android ./
+          cp -r graph_app/ios ./ 2>/dev/null || true
+          rm -rf graph_app temp_code
+
       - name: Install Dependencies
         run: flutter pub get
 
