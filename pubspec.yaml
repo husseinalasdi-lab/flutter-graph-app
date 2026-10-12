@@ -1,0 +1,17 @@
+name: graph_app
+description: "A graph plotting application"
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fl_chart: ^0.68.0
+  math_expressions: ^2.4.0
+  cupertino_icons: ^1.0.6
+
+flutter:
+  uses-material-design: true
